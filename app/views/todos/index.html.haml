@@ -1,7 +1,12 @@
-%h1 ToDos
-%ul
-  - @todos.each do |todo|
-    %li
-      = todo.title
-    %li
-      = todo.text
+.container
+  %h2 ToDos
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th Text
+    %tbody
+      - @todos.each do |todo|
+        %tr
+          %td= todo.title
+          %td= todo.text
