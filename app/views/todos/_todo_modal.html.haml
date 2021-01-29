@@ -1,0 +1,19 @@
+#todomodal.modal.fade{'aria-hidden' => 'true', role: 'dialog', tabindex: '-1'}
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title New ToDo
+        %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+          %span{'aria-hidden' => 'true'} ×
+      .modal-body
+        = form_with model: @todo do |form|
+          %div
+            = form.label :title
+            %br/
+            = form.text_field :title
+          %div
+            = form.label :text
+            %br/
+            = form.text_area :text
+          %div
+            = form.submit
