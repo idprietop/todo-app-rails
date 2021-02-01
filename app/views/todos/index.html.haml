@@ -1,3 +1,4 @@
+= render partial: 'todo_modal'
 .container
   %h2 ToDos
   %table.table
@@ -10,3 +11,7 @@
         %tr
           %td= todo.title
           %td= todo.text
+          
+.modal-container
+
+= link_to('New ToDo', todos_new_path, remote: true)
